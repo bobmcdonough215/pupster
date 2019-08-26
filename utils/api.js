@@ -1,15 +1,17 @@
 import axios from "axios";
 import { functionExpression } from "@babel/types";
-const BASEURL = "https://dog.ceo/dog-api/";
+const BASEURL = "https://www.omdbapi.com/?t=";
 
 export default {
-  //searchRandom: function(query) {
-    //return axios.get(BASEURL + query + APIKEY);
+  searchBreed: function(breed) {
+    return axios.get(BASEURL + (breed) + images);
 
-    //searchBreed
+},
 
-    //
-  }
-};
+searchRandom: function() {
+    return axios.get(BASEURL + "breeds/image/random");
+  },
 
-//functionExpression
+searchList: function(list){
+  return axios.get(BASEURL + "breeds/list");
+}};
